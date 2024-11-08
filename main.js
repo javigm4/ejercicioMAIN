@@ -52,7 +52,7 @@ const productList = document.createElement("ul");
 
 p1Array.forEach((item) => {
   const li = document.createElement("li");
-  const p = document.createAttribute("p");
+  const p = document.createElement("p");
   productList.appendChild(li);
   li.appendChild(p);
   p.textContent = item;
