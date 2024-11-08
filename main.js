@@ -1,3 +1,5 @@
+import { Product } from "./Products";
+
 const pData = {
   products: [
     {

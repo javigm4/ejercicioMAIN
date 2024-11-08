@@ -1,5 +1,5 @@
-import Price from "./Price.js";
-import Reviews from "./Reviews.js";
+import { Price } from "./Price.js";
+import { Reviews } from "./Reviews.js";
 
 class Product extends Price {
   constructor(
