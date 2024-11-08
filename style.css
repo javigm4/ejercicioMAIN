@@ -1,7 +1,8 @@
 li {
   display: block;
   list-style: none;
-  background-color: gray;
+  background-color: rgb(209, 207, 207);
   padding: 10px;
   margin: 10px;
+  border-radius: 2px;
 }
