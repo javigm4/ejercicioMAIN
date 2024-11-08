@@ -31,29 +31,34 @@ const pData = {
 };
 
 const p1 = new Product(
-  pData.products[0].title,
-  pData.products[0].url,
-  pData.products[0].thumbnail,
+  pData.products[0].amazonChoice,
+  pData.products[0].amazonPrime,
+  pData.products[0].asin,
+  pData.products[0].bestSeller,
+  pData.products[0].price,
+  pData.products[0].reviews,
   pData.products[0].score,
-  pData.products[0].price.current_price,
-  pData.products[0].reviews.total_reviews
+  pData.products[0].sponsored,
+  pData.products[0].thumbnail,
+  pData.products[0].title,
+  pData.products[0].url
 );
 
 const p1Array = [
-  p1.title,
-  p1.url,
-  p1.thumbnail,
-  p1.score,
-  p1.price.current_price, // Ahora se usa correctamente el valor numérico
-  p1.reviews.total_reviews, // Se utiliza correctamente el número de reseñas
+  `Title: ${p1.title}`,
+  `URL: ${p1.url}`,
+  `Thumbnail: <img src="${p1.thumbnail}" alt="${p1.title}" />`,
+  `Score: ${p1.score}`,
+  `Price: ${p1.price.current_price}`,
+  `Reviews: ${p1.reviews.total_reviews}`,
 ];
 
 const productList = document.createElement("ul");
 
 p1Array.forEach((item) => {
   const li = document.createElement("li");
-  li.textContent = item; // Se asigna directamente el valor a la propiedad 'textContent' de 'li'
-  productList.appendChild(li); // Se agrega el 'li' directamente a 'productList'
+  li.innerHTML = item; // Usamos innerHTML para permitir imágenes o HTML
+  productList.appendChild(li);
 });
 
 // Luego agregar productList al DOM
