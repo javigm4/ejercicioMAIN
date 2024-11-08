@@ -30,6 +30,7 @@ const pData = {
   ],
 };
 
+// Crear instancia del producto
 const p1 = new Product(
   pData.products[0].amazonChoice,
   pData.products[0].amazonPrime,
@@ -45,19 +46,20 @@ const p1 = new Product(
 );
 
 const p1Array = [
-  `Title: ${p1.title}`,
-  `URL: ${p1.url}`,
-  `Thumbnail: <img src="${p1.thumbnail}" alt="${p1.title}" />`,
-  `Score: ${p1.score}`,
-  `Price: ${p1.price.current_price}`,
-  `Reviews: ${p1.reviews.total_reviews}`,
+  p1.title,
+  p1.url,
+  p1.thumbnail,
+  p1.score,
+  p1.price.current_price, // Asegúrate de acceder a price correctamente
+  p1.reviews.total_reviews,
 ];
 
+// Crear lista de productos
 const productList = document.createElement("ul");
 
 p1Array.forEach((item) => {
   const li = document.createElement("li");
-  li.innerHTML = item; // Usamos innerHTML para permitir imágenes o HTML
+  li.textContent = item; // Directamente asignar el texto
   productList.appendChild(li);
 });
 
