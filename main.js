@@ -44,8 +44,8 @@ const p1Array = [
   p1.url,
   p1.thumbnail,
   p1.score,
-  p1.price,
-  p1.reviews,
+  p1.price.current_price,
+  p1.reviews.total_reviews,
 ];
 
 const productList = document.createElement("ul");
