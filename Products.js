@@ -1,7 +1,7 @@
 import { Price } from "./Price.js";
 import { Reviews } from "./Reviews.js";
 
-class Product extends Price {
+class Products extends Price {
   constructor(
     amazonChoice,
     amazonPrime,
@@ -36,4 +36,4 @@ class Product extends Price {
   }
 }
 
-export { Product };
+export { Products };
