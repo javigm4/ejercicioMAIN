@@ -31,24 +31,32 @@ const pData = {
 };
 
 const p1 = new Product(
-  pData.products[0].amazonChoice,
-  pData.products[0].amazonPrime,
-  pData.products[0].asin,
-  pData.products[0].bestSeller,
-  pData.products[0].price,
-  pData.products[0].reviews,
-  pData.products[0].score,
-  pData.products[0].sponsored,
-  pData.products[0].thumbnail,
   pData.products[0].title,
-  pData.products[0].url
+  pData.products[0].url,
+  pData.products[0].thumbnail,
+  pData.products[0].score,
+  pData.products[0].price.current_price,
+  pData.products[0].reviews.total_reviews
 );
+
+const p1Array = [
+  p1.title,
+  p1.url,
+  p1.thumbnail,
+  p1.score,
+  p1.price,
+  p1.reviews,
+];
 
 const productList = document.createElement("ul");
 
-const li1 = document.createElement("li");
-li1.textContent = p1.amazonChoice;
-productList.appendChild(li1);
+p1Array.forEach((item) => {
+  const li = document.createElement("li");
+  const p = document.createAttribute("p");
+  productList.appendChild(li);
+  li.appendChild(p);
+  p.textContent = item;
+});
 
 // Luego agregar productList al DOM
 document.body.appendChild(productList);
