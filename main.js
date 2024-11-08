@@ -1,4 +1,4 @@
-import { Product } from "./Products";
+import { Products } from "./Products";
 
 const pData = {
   products: [
@@ -31,7 +31,7 @@ const pData = {
 };
 
 // Crear instancia del producto
-const p1 = new Product(
+const p1 = new Products(
   pData.products[0].amazonChoice,
   pData.products[0].amazonPrime,
   pData.products[0].asin,
