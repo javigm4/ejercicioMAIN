@@ -50,7 +50,6 @@ const p1Array = [
   p1.url,
   p1.thumbnail,
   p1.score,
-  p1.price.current_price, // Asegúrate de acceder a price correctamente
   p1.reviews.total_reviews,
 ];
 
