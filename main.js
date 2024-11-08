@@ -44,18 +44,16 @@ const p1Array = [
   p1.url,
   p1.thumbnail,
   p1.score,
-  p1.price.current_price, // Accede a 'current_price' de 'price'
-  p1.reviews.total_reviews, // Accede a 'total_reviews' de 'reviews'
+  p1.price.current_price, // Ahora se usa correctamente el valor numérico
+  p1.reviews.total_reviews, // Se utiliza correctamente el número de reseñas
 ];
 
 const productList = document.createElement("ul");
 
 p1Array.forEach((item) => {
   const li = document.createElement("li");
-  const p = document.createElement("p");
-  productList.appendChild(li);
-  li.appendChild(p);
-  p.textContent = item;
+  li.textContent = item; // Se asigna directamente el valor a la propiedad 'textContent' de 'li'
+  productList.appendChild(li); // Se agrega el 'li' directamente a 'productList'
 });
 
 // Luego agregar productList al DOM
