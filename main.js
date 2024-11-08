@@ -30,30 +30,33 @@ const pData = {
   ],
 };
 
-const products = pData.products.map(
-  (productData) =>
-    new Product(
-      productData.amazonChoice,
-      productData.amazonPrime,
-      productData.asin,
-      productData.bestSeller,
-      productData.price,
-      productData.reviews,
-      productData.score,
-      productData.sponsored,
-      productData.thumbnail,
-      productData.title,
-      productData.url
-    )
+const p1 = new Product(
+  pData.products[0].title,
+  pData.products[0].url,
+  pData.products[0].thumbnail,
+  pData.products[0].score,
+  pData.products[0].price.current_price,
+  pData.products[0].reviews.total_reviews
 );
+
+const p1Array = [
+  p1.title,
+  p1.url,
+  p1.thumbnail,
+  p1.score,
+  p1.price.current_price, // Accede a 'current_price' de 'price'
+  p1.reviews.total_reviews, // Accede a 'total_reviews' de 'reviews'
+];
 
 const productList = document.createElement("ul");
 
-// Crear los elementos de lista y agregarlos al DOM
-products.forEach((product) => {
+p1Array.forEach((item) => {
   const li = document.createElement("li");
-  li.textContent = product.title; // Puedes agregar otros atributos aquí
+  const p = document.createElement("p");
   productList.appendChild(li);
+  li.appendChild(p);
+  p.textContent = item;
 });
+
 // Luego agregar productList al DOM
 document.body.appendChild(productList);
