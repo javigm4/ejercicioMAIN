@@ -50,6 +50,7 @@ const p1Array = [
   p1.url,
   p1.thumbnail,
   p1.score,
+  p1.current_price,
   p1.reviews.total_reviews,
 ];
 
